@@ -8,3 +8,4 @@ def file_parse_practice(filename):
 if __name__ == "__main__":
     print("hello world")
     print("poop")
+    print("graph coloring")
