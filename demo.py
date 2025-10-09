@@ -8,6 +8,14 @@ def file_parse_practice(filename):
 if __name__ == "__main__":
     L = ["Harry", "Liam", "Zayn", "Louis", "Niall"]
     #for each member of one direction, create a list with the individual letters of their name 
-        
+    newList = []
+    for elt in L:
+        letters = []
+        for c in elt:
+            letters.append(c)
+        letters.append("1D")
+        newList.append(letters)
+    print(newList)
+
         
 
