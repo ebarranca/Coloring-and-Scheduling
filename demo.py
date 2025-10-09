@@ -6,7 +6,8 @@ def file_parse_practice(filename):
     pass 
 
 if __name__ == "__main__":
-    print("hello world")
-    print("poop")
-    print("graph coloring")
-    print("one direction")
+    L = ["Harry", "Liam", "Zayn", "Louis", "Niall"]
+    #for each member of one direction, create a list with the individual letters of their name 
+        
+        
+
