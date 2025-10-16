@@ -86,6 +86,7 @@ def main():
 
     #change the original list so that there are no multiples of 3
 
+
     ############################################################################################
     ############################################################################################
 
@@ -114,4 +115,33 @@ def main():
     ## --> what questions do you have? 
 
 
-main()
+   #using a for loop, build a list of n random numbers using python's random function 
+    #first set n so that your loop depends on the variable and isn't hard coded for a specific n
+    #n = 
+
+    #then create a new list that is all of the elements from your above list that are multiples of 3
+    
+    #print the number of multiples of 3 and the number of non multiples of 3 from the original n
+
+    #change the original list so that there are no multiples of 3
+
+import random
+n=20
+og_list=[] ##creating a new list
+for i in range(n):
+     og_list.append(random.randint(1, 100)) ##adding random numbers between 1 and 100 to the back of the list using append
+print(f"Original list: {og_list}") ##prints out the list that we have created 
+
+mult_of_3=[] ##new list again
+for num in og_list: ##specifying that we want to use the numbers from the previous list
+    if num % 3 == 0: ##if the number has a remainder of 0 when divided by 3 then it is a multiple of 3
+        mult_of_3.append(num) ## if it is a multiple of 3, add to the back of new list
+print(f"multiples of 3: {mult_of_3}") ##print new list
+
+num_mult_of_3 = len(mult_of_3) ##this is telling us that the number of multiples of 3 is the length of the previous list
+num_non_mult_of_3 = n-num_mult_of_3 # this is saying that the number of non multiples of 3 is the total number of elements in the list minus the list of multiples of 3
+print(f"Number of multiples of 3: {num_mult_of_3}") #print the number of multiples of 3
+print(f"Number of non multiples: {num_non_mult_of_3}") #print the number of non multiples of 3
+
+
+
