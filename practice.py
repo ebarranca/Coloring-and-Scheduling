@@ -144,4 +144,53 @@ print(f"Number of multiples of 3: {num_mult_of_3}") #print the number of multipl
 print(f"Number of non multiples: {num_non_mult_of_3}") #print the number of non multiples of 3
 
 
+    #create a string of n random vowels then m random consonants 
+    #your string cannot have double letters (every letter must be distinct from adjacent letters)
+    #n= 
+    #m=
 
+    #then split the string you made into "vowel consonant space"
+    #for whichever of m or n is smaller, loop through the letters again 
+    #example: n = 4 m=11 string could be: "aoiurmspgwkrnlq"
+    #then would want "ar om is up ag ow ik ur an ol iq"
+
+
+
+ #pick a graph -- MAYBE start with a complete graph or a complete bipartite graph 
+    #create a list (or set) of vertices in the graph
+    #build a set of pairs to represent the edges of a graph 
+    # I want you to start thinking about how you might represent this data 
+
+    ## think about: 
+    ## --> should edges be ordered pairs? 
+    ## --> should vertices and edges be two different data structures? 
+    ## --> with the data structures you've chosen, can we check if two graphs are equal? 
+    ## --> what questions do you have? 
+
+
+
+#V={0,1,2,3}
+#E=[{0,1}, {0,2}, {1,2}, {1,3}]
+#E.append({0,3})
+#G=(V,E)
+#E.append({0,3})
+#len(E)
+#print(f"{G}")
+#print(f"{len(E)}")
+
+V={0,1,2,3,4}
+E=[{0,1}, {0,2}, {1,2}, {1,3}, {0,3},{2,3},{0,4}, {1,4}, {2,4}, {3,4}]
+G=(V,E)
+
+x=0
+for i in V:
+    for j in V:
+        if i<j:
+            if {i,j} not in E:
+                x+=1
+                #print(f"Not complete")
+if x==0:
+    print(f"complete")               
+else:
+    print(f"not complete")
+main()
