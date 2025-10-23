@@ -58,3 +58,13 @@ for num in sorted(universe):  # go through each number in order
 print("\nGraph:")
 for num, edges in graph.items():
     print(f"{num} = {edges}")
+
+
+E=[]
+for number in graph:
+    for V1 in graph[number]:
+        for V2 in graph[number]:
+            if V1 != V2:
+                if {V1,V2} not in E:
+                    E.append({V1,V2})
+print(E)
