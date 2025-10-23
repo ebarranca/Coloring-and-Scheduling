@@ -169,14 +169,14 @@ print(f"Number of non multiples: {num_non_mult_of_3}") #print the number of non 
 
 
 
-#V={0,1,2,3}
-#E=[{0,1}, {0,2}, {1,2}, {1,3}]
-#E.append({0,3})
-#G=(V,E)
-#E.append({0,3})
-#len(E)
-#print(f"{G}")
-#print(f"{len(E)}")
+V={0,1,2,3}
+E=[{0,1}, {0,2}, {1,2}, {1,3}]
+E.append({0,3})
+G=(V,E)
+E.append({0,3})
+len(E)
+print(f"{G}")
+print(f"{len(E)}")
 
 V={0,1,2,3,4}
 E=[{0,1}, {0,2}, {1,2}, {1,3}, {0,3},{2,3},{0,4}, {1,4}, {2,4}, {3,4}]
@@ -193,4 +193,3 @@ if x==0:
     print(f"complete")               
 else:
     print(f"not complete")
-main()
