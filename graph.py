@@ -1,4 +1,4 @@
-
+import pygraphviz as pgv
 
 
 def main():
@@ -68,3 +68,17 @@ for number in graph:
                 if {V1,V2} not in E:
                     E.append({V1,V2})
 print(E)
+
+G = pgv.AGraph(strict=False, directed=False) # undirected graph and no multi-edges
+nodes = set() # to hold unique nodes
+for edge in E: # each edge is a set of two nodes from E
+    nodes.update(edge) # add nodes from edges
+G.add_nodes_from(nodes)
+for edge in E:
+    G.add_edge(*list(edge))
+G.graph_attr['label'] = 'Complement Graph' 
+G.node_attr['shape'] = 'circle' # set node shape to circle
+G.edge_attr['color'] = 'blue' # set edge color to blue
+G.layout(prog='dot') # use dot layout
+G.draw('complement_graph.png')
+print("\nGraph saved as 'complement_graph.png'")
